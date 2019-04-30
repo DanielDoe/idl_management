@@ -13,11 +13,13 @@ export default () => {
               {RouteComponent.map(route => {
                 return (
                     <Route
+                      key={route.key}
                       path={route.path}
                       component={route.component}
                       exact={route.exact}
                     />
                 )
+                //console.log('Route: ', route)
               })}
             </Switch>
           </TransitionGroup>
